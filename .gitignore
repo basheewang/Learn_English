@@ -12,6 +12,9 @@
 *.cb2
 .*.lb
 
+## region preview garbage
+_region_.tex
+
 ## Intermediate documents:
 *.dvi
 *.xdv

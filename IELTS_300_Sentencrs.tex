@@ -1,0 +1,212 @@
+\documentclass[UTF8, scheme=chinese]{ctexbook}
+
+\usepackage{xeCJK}
+\xeCJKsetup{
+  AutoFallBack = true,
+  AutoFakeBold = true,
+  PunctStyle = kaiming,
+  CheckFullRight = true,
+  CheckSingle = false,
+  AllowBreakBetweenPuncts = true,
+  CJKmath = true,
+}
+
+% 完整的中文章节格式设置
+\ctexset{
+    % 章设置
+    % chapter = {
+    %     format = \huge\bfseries\centering,
+    %     nameformat = {},
+    %     titleformat = {},
+    %     name = {第,章},
+    %     number = \chinese{chapter},
+    %     aftername = \quad,
+    %     beforeskip = 20pt,
+    %     afterskip = 20pt,
+    % },
+    % 节设置
+    section = {
+        format = \Large\bfseries,
+        nameformat = {},
+        titleformat = {},
+        name = {第,节},
+        number = \chinese{section},
+        aftername = \quad,
+    },
+    % 小节设置
+    subsection = {
+        format = \large\bfseries,
+        nameformat = {},
+        titleformat = {},
+        name = {第,句},
+        number = \chinese{subsection},
+        aftername = \quad,
+    },
+    % 子小节设置
+    subsubsection = {
+        format = \normalsize\bfseries,
+        nameformat = {},
+        titleformat = {},
+        name = {第,子小节},
+        number = \chinese{subsubsection},
+        aftername = \quad,
+    }
+}
+
+\xeCJKDeclareSubCJKBlock{Ext-A}{ "3400 -> "4DB5 }
+\xeCJKDeclareSubCJKBlock{Ext-B}{ "20000 -> "2A6DF }
+\xeCJKDeclareSubCJKBlock{CircNum}{ "2460 -> "2473 }
+
+\setCJKmainfont[%
+BoldFont={FZYouHei_GBK 513B},   %
+% Ext-A={仓耳今楷05-W04},
+Ext-B={SimSun-ExtB},
+CircNum={IosevkaTerm NFM}]
+{NSimSun}
+\newCJKfontfamily[li]\hmls{FZZJ-HMLSJF}
+\newCJKfontfamily[kai]\fzxk{FZNewKai-Z03}
+\newCJKfontfamily[song]\ssb{SimSun-ExtB}
+
+\usepackage{xcolor}
+\usepackage{pifont}
+
+% 引入 tikz 及相关路径变形库（用于画波浪线）
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+
+% 自定义双波浪线命令 \uuwave
+\newcommand{\uuwave}[1]{%
+  \tikz[baseline=(char.base)]{
+    % 将文字放入一个无边距的节点中
+    \node[inner sep=0pt, outer sep=0pt] (char) {#1};
+    % 画第一条波浪线 (距离文字稍近)
+    \draw[decorate, decoration={snake, amplitude=0.3mm, segment length=2mm}]
+      ([yshift=-1.5pt]char.south west) -- ([yshift=-1.5pt]char.south east);
+    % 画第二条波浪线 (在第一条下方)
+    \draw[decorate, decoration={snake, amplitude=0.3mm, segment length=2mm}]
+      ([yshift=-3.0pt]char.south west) -- ([yshift=-3.0pt]char.south east);
+  }%
+}
+
+% 引入下划线宏包，normalem 参数防止破坏原有的 \emph{} 斜体命令
+\usepackage[normalem]{ulem}
+
+% 引入颜色宏包（可选，用于让中文标注颜色变浅一点）
+\usepackage{xpinyin}
+
+% 设置段落缩进和行距
+\setlength{\parindent}{0pt}
+\linespread{1.5}
+
+% ==========================================
+% 自定义语法标注命令 \markword
+% 用法: \markword[线型命令]{英文内容}{中文标注}
+% 默认线型为单实线 \uline。如果不想要线，可以传入 \mbox
+% ==========================================
+\newcommand{\markword}[3][\uline]{%
+  \begin{tabular}[t]{@{}c@{}}%
+    #1{#2} \\[-0.2ex]% 调整英文和中文之间的垂直间距
+    \small\color{darkgray} #3% 中文标注字号设小，颜色设为深灰
+  \end{tabular}%
+}
+
+\usepackage{mathabx}
+
+\title{\fzxk {\huge 雅思语法学习笔记}}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter{词性}
+
+\section{名词和冠词}
+
+\subsection{复合名词}
+
+\markword[\uuline]{\textbf{Britain}}{主语 1}
+\markword{had produced}{谓语}
+\markword[\uwave]{textiles}{宾语}
+\markword[\mbox]{(like wool, linen and cotton),}{后置定语 (修饰 textiles)}
+\markword[\mbox]{[for hundreds of years],}{时间状语}
+\vspace{0.5cm} % 手动换行并增加行距
+\markword[\mbox]{but}{连词}
+\markword[\mbox]{[prior to the Industrial Revolution],}{时间状语}
+\markword[\uuline]{the British textile business}{主语 2}
+\markword{was}{系动词}
+\vspace{0.5cm}
+\markword[\uuwave]{a true ``cottage industry'',}{表语}
+\markword[\mbox]{[with the work performed in small workshops or even homes by}{伴随状语}
+\vspace{0.5cm}
+individual spinners, weavers and dyers].
+
+\subsection{可数名词变复数（规则变化）}
+
+\markword[\mbox]{There's been}{there be 结构}
+\markword[\uuline]{\textbf{some interesting research}}{主语}
+\markword[\mbox]{{\large \textcolor{red}{\(\lgroup\)}}}{定语从句(修饰 research)开始}
+\markword[\mbox]{which}{引导词/主语}
+
+\vspace{0.5cm}
+
+\markword{has found}{谓语}
+\markword[\mbox]{\textcolor{blue}{\(\lgroup\)}}{宾语从句开始}
+\markword[\mbox]{that}{引导词}
+\markword[\uuline]{tardigrades}{主语 1}
+\markword{are capable of}{谓语 1}
+\markword[\uwave]{surviving radiation and very high pressure,}{宾语 1}
+
+\vspace{0.5cm}
+
+\markword[\mbox]{and}{连词}
+\markword[\uuline]{they}{主语 2}
+\markword{are also able to withstand}{谓语 2}
+\markword[\uwave]{temperatures}{宾语 2}
+\markword[\mbox]{(as cold as -200 degrees centigrade),}{后置定语，修饰 temperatures}
+
+\vspace{0.5cm}
+
+\markword[\mbox]{or}{连词}
+\markword[\uwave]{highs}{宾语 3}
+\markword[\mbox]{(of more than 148 degrees centigrade),}{后置定语，修饰 highs}
+\markword[\mbox]{(which is incredibly hot).}{定语从句}
+\markword[\mbox]{\textcolor{blue}{\(\rgroup\)}}{宾语从句结束}
+\markword[\mbox]{{\large \textcolor{red}{\(\rgroup\)}}}{定语从句结束}
+
+\subsection{可数名词变复数（不规则变化）}
+
+\markword[\mbox]{[In the 1960s],}{时间状语}
+\markword[\uuline]{the astronomer Gerald Hawkins}{主语}
+\markword{suggested}{谓语}
+\markword[\mbox]{\large\textcolor{blue}{\(\lgroup\)}}{宾从开始}
+\markword[\mbox]{that}{引导词}
+
+\vspace{0.5cm}
+
+\markword[\uuline]{the cluster of megalithic stones}{主语}
+\markword[\mbox]{operated}{谓语}
+\markword{[as a form of calendar],}{方式状语}
+
+\vspace{0.5cm}
+
+\markword[\mbox]{[with different points corresponding to astronomical phenomenal]}{伴随状语}
+
+\vspace{0.5cm}
+
+\markword[\mbox]{<such as solstices, equinoxes and eclipses>}{同位语（修饰 phenomenal）}
+\markword[\mbox]{(occurring at different times of the year).}{定语（修饰同位语）}
+\markword[\mbox]{\large\textcolor{blue}{\(\rgroup\)}}{宾从结束}
+
+
+\end{document}
+
+% Local Variables:
+% TeX-engine: xetex
+% TeX-master: t
+% End:
+
+% LocalWords:  AutoFallBack AutoFakeBold PunctStyle kaiming CheckFullRight GBK
+% LocalWords:  CheckSingle AllowBreakBetweenPuncts CJKmath BoldFont FZYouHei li
+% LocalWords:  NSimSun IosevkaTerm NFM FZZJ HMLSJF FZNewKai kai SimSun ExtB
+% LocalWords:  CircNum xetex LocalWords
