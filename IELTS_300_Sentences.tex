@@ -1,5 +1,7 @@
 \documentclass[UTF8, scheme=chinese]{ctexbook}
 
+\usepackage{pdflscape}% 引入横向排版宏包
+
 \usepackage{xeCJK}
 \xeCJKsetup{
   AutoFallBack = true,
@@ -110,8 +112,15 @@ CircNum={IosevkaTerm NFM}]
   \end{tabular}%
 }
 
+% 下面两个数学符号的package是互相冲突的！
+\usepackage{amsmath}
 \usepackage{mathabx}
 % \usepackage{fdsymbol}
+
+% 表格
+\usepackage{enumitem}
+\usepackage{tabularray}
+\UseTblrLibrary{varwidth}
 
 \title{\fzxk {\huge 雅思语法学习笔记}}
 
@@ -120,7 +129,10 @@ CircNum={IosevkaTerm NFM}]
 
 \tableofcontents
 
-\input{contents/part001}
+\input{contents/part000}
+% \input{contents/part001}
+\input{contents/part002}
+
 
 \end{document}
 
