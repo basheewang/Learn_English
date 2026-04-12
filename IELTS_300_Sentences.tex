@@ -1,6 +1,9 @@
-\documentclass[UTF8, scheme=chinese]{ctexbook}
+\documentclass[UTF8, scheme=chinese, oneside]{ctexbook}
 
 \usepackage{pdflscape}% 引入横向排版宏包
+
+% 让正文区域占整个页面纸张面积的 80%
+\usepackage[scale=0.8]{geometry}
 
 \usepackage{xeCJK}
 \xeCJKsetup{
@@ -121,6 +124,11 @@ CircNum={IosevkaTerm NFM}]
 \usepackage{enumitem}
 \usepackage{tabularray}
 \UseTblrLibrary{varwidth}
+% 1. 修改当前页底部的提示文字 (默认是 Continued on next page)
+\DefTblrTemplate{contfoot-text}{default}{下页继续}
+
+% 2. 修改下一页顶部的提示文字 (默认是 (Continued))
+\DefTblrTemplate{conthead-text}{default}{(续表)}
 
 \title{\fzxk {\huge 雅思语法学习笔记}}
 
@@ -128,10 +136,24 @@ CircNum={IosevkaTerm NFM}]
 \maketitle
 
 \tableofcontents
+\newpage
 
 \input{contents/part000}
-% \input{contents/part001}
+\input{contents/part001}
 \input{contents/part002}
+\input{contents/part003}
+\input{contents/part004}
+\input{contents/part005}
+\input{contents/part006}
+\input{contents/part007}
+\input{contents/part008}
+\input{contents/part009}
+\input{contents/part010}
+\input{contents/part011}
+\input{contents/part012}
+\input{contents/part013}
+\input{contents/part014}
+\input{contents/part015}
 
 
 \end{document}
