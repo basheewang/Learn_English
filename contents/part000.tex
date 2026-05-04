@@ -6,17 +6,17 @@
 % 使用 landscape 环境包裹你的表格
 \begin{landscape}
   \pagestyle{empty}
-  \begin{center}
+  \begin{adjustwidth}{-2.2cm}{0cm}
     \begin{longtblr}[
       label = none,
       ]{
       vlines, hlines,
       % 移除全局的 halign=c，改为在每一列单独设置，这样更灵活
       columns={valign=m},
-      column{1}={0.15\linewidth, halign=c, bg=azure9},
-      column{2}={0.35\linewidth, halign=l},
+      column{1}={0.2\linewidth, halign=c, bg=azure9},
+      column{2}={0.4\linewidth, halign=l},
       % 关键修改：给第三列指定宽度（X代表填满剩余所有空间），并设为左对齐
-      column{3}={0.5\linewidth, halign=l},
+      column{3}={0.4\linewidth, halign=l},
       rows={abovesep=5pt},
       row{1}={font=\bfseries, bg=azure7, halign=c}, % 表头居中
       % 关键修改：处理单元格内的 list 环境
@@ -27,15 +27,17 @@
       \textbf{宾语} (The Object) —— “动作的承受者”                  & 宾语接在及物动词（Transitive Verb）之后，表示动作涉及的对象或受动者。                                                   & $主语 (A) \xrightarrow{动作} 宾语 (B)$. 注意：A 对 B 做了某事，A $\neq$ B                                                                                                                    \\
       \textbf{表语} (The Predictive) —— “主语的等号”                & 表语接在系动词（Linking Verb）之后，用来描述主语的身份、特征、状态或性质。                                              & $主语 (A) = 表语 (A')$. 表语其实就是主语的另一种描述，A $=$ A'.                                                                                                                           \\
       \textbf{系动词} (Linking Verbs)                               & 系动词本身没有具体的动作含义，它的作用像一把“等号” (=)，用来连接主语和描述主语状态的信息。                              & \begin{description}[nosep]
-                                                                                                                                       \item[最常见的系动词] be (am, is, are, was, were)
-                                                                                                                                       \item[感官系动词] look (看起来), sound (听起来), smell (闻起来), feel (摸起来/感觉)
-                                                                                                                                       \item[变化/状态系动词] become (变成), stay (保持), remain (依然是)
-                                                                                                                                     \end{description}                                                                                                                                                                                                                                           \\
+                                                                                                                                                                                         \item[最常见的系动词] be (am, is, are, was, were)
+                                                                                                                                                                                         \item[感官系动词] look (看起来), sound (听起来), smell (闻起来), feel (摸起来/感觉)
+                                                                                                                                                                                         \item[变化/状态系动词] become (变成), stay (保持), remain (依然是)
+                                                                                                                                                                                       \end{description}                                                                                                                                                                                                                                           \\
       \textbf{后置定语} (Post-modifier / Post-positional Attribute) & 它像胶水一样紧紧粘在名词后面，用来限定或修饰这个名词“是哪一个”或“什么样的”。它属于名词短语（Noun Phrase）内部的一部分。 & The engineer [working at this company] is my friend. \newline \textit{working at this company} 是后置定语。它定义了是“哪位”工程师。如果删掉它，句子的主语依然完整，但范围变模糊了。                \\
       \textbf{主语补足语} (Subject Complement)                      & 它是用来补充说明主语的状态或身份的。它不是名词的“零件”，而是通过系动词（Linking Verb）或某些特定动词与主语建立联系。    & 它属于句子骨干（Clause Structure）的一部分。删掉后，句子意思不完整（如果是系动词后）。 \newline 如：The chip remains \textit{[untested]}. \newline \textit{untested} 是主语补足语。它说明了芯片目前的状态。 \\
       \textbf{同位语}（Appositive）                                 & 两个名词（或名词性短语）并列放在一起，支撑或解释同一个对象。第二个名词是对第一个名词的身份重塑或进一步补充。            & $[Noun A], [Noun B], ...$  （其中 $A = B$）. 注意，同位语通常用来解释名词的内容 (What it is)，而定语从句通常用来描述名词的特征 (Which one)。                                              \\
+      \textbf{限制性定语从句} (Restrictive Relative Clause)&它是主句不可分割的一部分。它存在的目的是为了限定（Limit）先行词的范围。没有它，我们不知道主句在说“哪一个”。特点： 没有逗号隔离。&The engineers [who work at Intel] are developing a new chip.\\
+      \textbf{非限制性定语从句} (Non-restrictive Relative Clause)&它只是对先行词的补充说明（Extra Information）。先行词本身已经很明确了（通常是人名、地名或世界上独一无二的事物），从句只是顺便提一下它的属性。特点： 必须用逗号隔开。&Tom, who works at this company, is an expert in this business.\\
     \end{longtblr}
-  \end{center}
+  \end{adjustwidth}
 \end{landscape}
 
 %%% Local Variables:
