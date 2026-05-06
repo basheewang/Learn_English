@@ -4,6 +4,7 @@
 
 \subsection{表示“加强，共同”的前缀}
 
+单词的“偏旁部首”就是词缀和词根，其中词缀又分为“前缀”和“后缀”。比如本句中的 associated 即可拆解为:as (表加强 ) + soci (联合) + ate (表动词) + (e)d (表形容词)。
 \begin{center}
   \begin{talltblr}[
     label = none, % Removes the "Table X:" text
@@ -12,58 +13,388 @@
     row{1}={font=\large\bfseries, bg=azure9},
     rows={halign=c, valign=m},
     columns={halign=c, valign=m},
-    column{2}={0.35\textwidth, halign=l},
-    column{3}={0.55\textwidth, halign=l}
+    column{2}={0.3\textwidth, halign=l},
+    column{3}={0.5\textwidth, halign=l}
     }
     类别     & 前缀                                               & 举例                                                                                          \\
-    表“加强” & ab-, ac-, af-, ad-, ag-, ap-, ar-, as-, at-        & abound, acclaim, affirm, adhere, aggravate, appreciate, arouse, assemble, attract             \\
-    表“共同” & co-, col-, com-, con-, cor-, sym-, syn-, syl-, sy- & cooperate, collaborate, combine, connect, correspond, sympathy, synchronize, syllable, system \\
+    表“加强” & ab-, ac-, af-, ad-, ag-, ap-, ar-, as-, at-        & abound (大量存在)，acclaim (称赞)，affirm (肯定), adhere (坚持)，aggravate (使恶化)，appreciate (感激), arouse (引起)，assemble (集合)，attract(吸引)             \\
+    表“共同” & co-, col-, com-, con-, cor-, sym-, syn-, syl-, sy- & cooperate (合作)，collaborate (协作)，combine (结合), connect (连接)，correspond (符合)，sympathy (同情), synchronize (使同步)，syllable (音节)，system (系统) \\
   \end{talltblr}
 \end{center}
 
 \subsection{表示否定意义的前缀}
 
-\subsection{表示“空间、方位、场所”的前缀}
-
-\subsection{与“数量、数字”有关的前缀}
-
-\subsection{表示“学术、主义”的后缀}
-
-\subsection{表示“性质、行为、状态”的后缀}
-
-\subsection{表“人或物”的后缀}
-
-\subsection{表示“做，使……”的后缀}
-
-\subsection{表示“写、画”的词根}
-
-\subsection{与“自然、科学”有关的词根}
-
-\subsection{与“时间、空间、顺序”有关的词根}
-
-\subsection{与“想法、观点”有关的词根}
-
-\subsection{合成动词}
-
+有一部分前缀表示“否定意义”，比如本句中的 decrease，其中词根creas表示“增加”但前缀de-表示“去除”的否定含义，因此该词表示“减少”。类似用法的前缀还有:
 \begin{center}
   \begin{talltblr}[
     label = none, % Removes the "Table X:" text
     ]{
     vlines, hlines,
-    row{1}={font=\large\bfseries, bg=azure9},
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
     rows={halign=c, valign=m},
-    columns={halign=c, valign=m}
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.25\linewidth, halign=l},
+    column{3}={0.5\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    类别&前缀&举例\\
+    “不、无、非”&un-, in-, im-, il-, ir-, non-&unhappy (不快乐的)，inactive (不活跃的)，impossible (不可能的)，inaccurate (不准确的)，illegal (非法的)，irregular (不规则的)，nonstop (不停的)\\
+    “相反、对立”&dis-, dif-, ant-, anti-, contra-, ob-, op-&dislike (不喜欢)，diffuse (扩散的)，antiwar (反战的)，contrary (相反的)，obstruct (阻碍)，opposite (相反的)\\
+    “错、坏”&mis-&misuse (误用)，misinformation (错误信息)\\
+    “去除、脱离”&ab-, abs-, de-&defrost (除霜)，abnormal (不正常的)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{表示“空间、方位、场所”的前缀}
+
+还有一些前缀表示与“空间、方位、场所”相关的含义，如submissive（顺从的），其中的sub-表示“下”，类似的还有：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.25\linewidth, halign=c, bg=azure9},
+    column{2}={0.15\linewidth, halign=l},
+    column{3}={0.5\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    前缀&表达含义&举例\\
+    circum-&环绕、周围&circumstance（环境）\\
+    e-, out-, extra-&出、外&emit（发出），outward（向外的），extract（提取）\\
+    in-, im-, inra-&内，里&inside（在里面），imprison（监禁），intranet（内联网）\\
+    inter-&在……之间&international（国际的）\\
+    post-&后，在……后&postwar（站后的）\\
+    pre-&前，预先&preview（御览）\\
+    pro-&向前，在前&progress（进展）\\
+    sub-, under-&\SetCell[r=2]{c}下&submerge（淹没），underneath（在……下面）\\
+    suc-, suf-, sug-, sup-等sub-的边形&&succeed（继承），suffocate（使窒息），suggest（暗示），suppress（镇压）\\
+    over-, super-&上&overhead（在头顶上方），superficial（肤浅的，表面的）\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{与“数量、数字”有关的前缀}
+
+本句中的microorganism可以拆开为“micro+organism”，其中前缀micro表示“小”。类似的表示“数量、数字”的前缀还有：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.25\linewidth, halign=l},
+    column{3}={0.5\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    类别&前缀&举例\\
+    “具体数字”&bi-, bin-, di-, twi-, tri-, quadr (i)-, quadru-, dec-, deca-, deci-, hect (o)-, kilo-&bicycle (自行车)，binoculars (双简望远镜)，dioxide (二氧化物)，twilight (黄昏)，triangle (三角形), quadrilateral (四边形), decade (十年), decimeter (分米)，hectare (公顷)，kilogram (千克)\\
+    “半、一半”&demi-, hemi-, semi-&demilune (半月)，hemisphere (半球), semiconductor (半导体)\\
+    “大或小”&macro-，magn (i)-, micro-&macrocosm (宏观世界)，microorganism (微生物)，magnify (放大)\\
+    “多或少”&multi-, mono-&multicultural (多文化的)，monopoly (垄断)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{表示“学术、主义”的后缀}
+
+本句中出现了多个以-logy结尾的单词，都是与“学术”相关的，还有类似的后缀如下：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.15\linewidth, halign=l},
+    column{3}={0.6\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    后缀&表达含义&举例\\
+    -logy&\SetCell[r=4]{c}……学，……术&multicultural (多文化的)，monopoly (垄断)\\
+    -ics&&mathematics (数学)，physics (物理学)\\
+    -graphy&&geography (地理学)，photography (摄影术)\\
+    -ry&&chemistry (化学)，surgery (外科学)\\
+    -ism&\SetCell[r=2]{c}……主义&socialism (社会主义), imperialism (帝国主义)\\
+    -ity&&humanity (人文主义)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{表示“性质、行为、状态”的后缀}
+
+文章中经常出现的以-ture结尾的单词，如本句中的 infrastructure，通常以该词缀结尾的单词含有与某种行为、状态相关的含义，类似的后缀还有：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.18\linewidth, halign=c, bg=azure9},
+    column{2}={0.25\linewidth, halign=l},
+    column{3}={0.47\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    类别&后缀&举例\\
+    常表形容词，指“有……性质的”&-ant, -ary, -ative, -itive, -ive, -atory, -ish, -ory, -some&repentant (后悔的)，elementary (基本的), talkative (健谈的)，competitive (竞争的)，active (积极的)，explanatory (解释的)，childish (孩子气的)，advisory (咨询的)，tiresome (令人厌烦的)\\
+    常表名词，表示“行为，过程，状态，结果”&-ation, -ition, -ment, -ness, -sion, -ture, -ure, -ature, -iture&preparation (准备)，transition (过渡)，development (发展)，happiness (幸福)，decision (决定),structure (结构)，pleasure (快乐)，creature (生物)，signature (签名)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{表“人或物”的后缀}
+
+有专业文章中，常会出现以-ist结尾的单词，通常这类单词表示“人”，如 scientist，类似的后缀还有：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.25\linewidth, halign=l},
+    column{3}={0.5\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    类别&后缀&举例\\
+    “人”&-er, -ier, -ian, -ician, -ist, -or, -ator&worker (工人), cashier (收银员)，musician (音乐家), scientist (科学家)，actor (演员)，educator (教育家)\\
+    “物”&-ware, -work&software (软件)，network (网络)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{表示“做，使……”的后缀}
+
+本句中 endangered 这个单词对于有些考生来说可能比较陌生，但是danger 大家应该都比熟悉，表示“危险”，而en-这个前缀表示“做，使……”，所以endanger就表示“使陷人险”,该词后面再加上后缀-ed，就构成了形容词endangered，意为“濒危的”。除了作前级,-en作后缀时也表达类似含义，相似的后缀还有:
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.25\linewidth, halign=l},
+    column{3}={0.5\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    类别&后缀&举例\\
+    常表动词，意为“做，使……”&-ate, -iate, -uate, -en, -fy, -ify, -ise, -ize&activate (使激活)，mediate (调解)，graduate (毕业), strengthen (使加强)，simplify (使简化)，purify (使纯净)，realise/realize (使实现)，modernize (使现代化)\\
+    常表名词，意为“化”&-faction, -ification, -isation, -ization&purification (净化)，globalization (全球化)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{表示“写、画”的词根}
+
+graph表示“图表”的含义，也是一个词根，表示“写、画”。类似含义的词根还有：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.75\linewidth, halign=l},
+    % column{3}={0.5\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    词根&举例\\
+    graph&graph (图表)，graphic (绘画的)，autograph (亲笔签名)\\
+    pict&picture (图片)，pictorial (图片的)，depict (描绘)\\
+    scrib/scipt&scribe (写下)，script (剧本)，describe (描述)，prescribe (开处方)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{与“自然、科学”有关的词根}
+
+阅读中经常出现自然科学相关话题的文章，里面包含很多专业术语，一般地专业术语汇总如下：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.4\linewidth, halign=l},
+    column{3}={0.35\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    类别&词根&举例\\
+    天文物理类&{cosm(o)= world\\astr(o), aster = star\\atmo = air\\luc, lust, lumin, lustr = light}&microcosm(微观世界)，astronaut(宇航员)，atmosphere(大气层)，illuminate(照明)\\
+    地理地貌类&{agr(i), agr(o)= field\\hum = earth\\cav = hole\\insul, isol = island}&agriculture(农业)，humid(潮湿的), excavate(挖掘)，insulate(使隔离)\\
+    生命科学类&{bio, bi = life\\gen(e), gener, geni(t)= birth\\nat, nasc, nai = to be born}&biodegradable(可生物降解的)，genetics(遗传学)，innate(天生的)\\
+    化学类&{chem(i), chemico, chemo = chemistry\\dens = to become thick\\flam, flagr = to burn\\fum = smoke}&chemical(化学的)，condense(浓缩)，flammable(易燃的)，perfume(香水)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{与“时间、空间、顺序”有关的词根}
+
+本句中的 chronological一词，其词根chrono就表示“时间”，类似的词根还有：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.35\linewidth, halign=l},
+    column{3}={0.4\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    类别&词根&举例\\
+    时间&{ann(u), enn = one year\\calend = first day\\chron(o), temper, tempor =time}&anniversary (周年纪念日)，calendar (日历), chronic (慢性的)，temporary (暂时的)\\
+    空间&{advant = ahead\\bord = side\\centr(i)= center}&advance(前进)，border(边界)，concentrate(集中)\\
+    顺序&{prim= first\\sequ, secut = follow}&primary(首要的)，sequence(顺序)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{与“想法、观点”有关的词根}
+
+本句中的 meditation 的词根medit表示“沉思”，类似的词根还有：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.15\linewidth, halign=c, bg=azure9},
+    column{2}={0.35\linewidth, halign=l},
+    column{3}={0.4\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    类别&词根&举例\\
+    与想法或态度有关&{cogn, gnor, gnos(t)= to know\\medit = to ponder\\intim = heart\\creed, cred, fid = trust\\gree, grac, grat = pleasing}&recognize(认出)，meditation(沉思), intimate(亲密的)，confidence(信心), graceful(优雅的)\\
+    与观点表达有关&{dic, dict = to say\\doc, doct, dox, dog = to teach\\fabl, fabul, fess = to speak\\log(u), loqu, locu = to speak\\lingu = language}&predict(预测)，doctrine(教义)，confess(承认)，dialogue(对话)，bilingual(双语的)\\
+  \end{talltblr}
+\end{center}
+
+
+\subsection{合成动词}
+
+英语中还有一类单词是合成词，如本句中的 overshadow 就是合成动词，常见的构词法如下：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.2\linewidth, halign=c, bg=azure9},
+    column{2}={0.7\linewidth, halign=l},
+    % column{3}={0.4\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
     }
     结构        & 举例                 \\
-    名词+动词   & baby-sit, proofread  \\
-    形容词+动词 & whitewash, safeguard \\
-    副词+动词   & overshadow, undergo  \\
+    名词+动词   & baby-sit（临时照看婴儿）, proofread（校对）  \\
+    形容词+动词 & whitewash（粉饰）, safeguard（保卫） \\
+    副词+动词   & overshadow（遮蔽）, undergo（经受）  \\
   \end{talltblr}
 \end{center}
 
 \subsection{合成名词}
 
+合成词中还有一类是合成名词，如本句中的 earthworm ，常见的构词法如下：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.2\linewidth, halign=c, bg=azure9},
+    column{2}={0.7\linewidth, halign=l},
+    % column{3}={0.4\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    结构&举例\\
+    名词+名词&bookshop(书店)，earthworm(蚯蚓)，milestone(里程碑)\\
+    形容词+名词&supermarket(超市)，greenhouse(温室)，mainstream(主流)\\
+    名词+动名词&sightseeing(观光)，storytelling(讲故事)，handwriting(书写)\\
+    动词+名词&cookbook(食谱)，typewriter(打字机)，pickpocket(扒手)\\
+  \end{talltblr}
+\end{center}
+
+
 \subsection{合成形容词}
+
+合成形容词也很常见，如本句中的widespread就是由wide+spread构成，常见的构词法如下：
+\begin{center}
+  \begin{talltblr}[
+    label = none, % Removes the "Table X:" text
+    ]{
+    vlines, hlines,
+    % 加入支持列表环境的测量参数 (记得在导言区加载 \UseTblrLibrary{varwidth})
+    % measure=vbox, stretch=-1,
+    rows={halign=c, valign=m},
+    columns={halign=c, valign=m},
+    column{1}={0.3\linewidth, halign=c, bg=azure9},
+    column{2}={0.6\linewidth, halign=l},
+    % column{3}={0.4\linewidth, halign=l},
+    % column{4}={0.35\linewidth, halign=l},
+    row{1}={font=\large\bfseries, bg=azure9, halign=c}
+    }
+    结构&举例\\
+    名词+过去/现在分词&home-made(自己动手做的)，English-speaking(说英语的)\\
+    名词+形容词&worldwide(世界范围的)，homesick(想家的)\\
+    副词+过去/现在分词&worldwide(世界范围的)，homesick(想家的)\\
+    形容词+过去/现在分词&easygoing(随和的)，newborn(新生的)\\
+    数词+名词（+形容词）&ten-year-old(十岁的)，first-class(一流的)\\
+  \end{talltblr}
+\end{center}
 
 
 
