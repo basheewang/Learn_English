@@ -14,9 +14,9 @@
       % 移除全局的 halign=c，改为在每一列单独设置，这样更灵活
       columns={valign=m},
       column{1}={0.2\linewidth, halign=c, bg=azure9},
-      column{2}={0.4\linewidth, halign=l},
+      column{2}={0.38\linewidth, halign=l},
       % 关键修改：给第三列指定宽度（X代表填满剩余所有空间），并设为左对齐
-      column{3}={0.4\linewidth, halign=l},
+      column{3}={0.42\linewidth, halign=l},
       rows={abovesep=5pt},
       row{1}={font=\bfseries, bg=azure7, halign=c}, % 表头居中
       % 关键修改：处理单元格内的 list 环境
@@ -25,6 +25,14 @@
       }
       语法成分                                             & 定义                                                                                                                    & 注释及示例                                                                                                                                                                                \\
       \textbf{宾语} (The Object) —— “动作的承受者”                  & 宾语接在及物动词（Transitive Verb）之后，表示动作涉及的对象或受动者。                                                   & $主语 (A) \xrightarrow{动作} 宾语 (B)$. 注意：A 对 B 做了某事，A $\neq$ B                                                                                                                    \\
+      \textbf{宾语补足语} (Object Complement) & 它跟在宾语后面，用来补充说明宾语的身份、特征、状态或发生的动作。逻辑模型： $主语 + 动词 + 宾语 (A) + 宾补 (A')$，（逻辑上，宾语和宾补之间存在一种隐形的 “is” 关系，即 $A = A'$）& {宾语补足语的四种常见“形态”:
+                                                                                                                                                                                                                                 \begin{enumerate}[nosep]
+                                                                                                                                                                                                                                   \item 名词/形容词作宾补 (描述身份或状态)，如：They named the dog \textit{Buddy}.
+                                                                                                                                                                                                                                   \item 动词不定式 (to do) 作宾补 (要求或建议)，如：The doctor told him \textit{to exercise more}.
+                                                                                                                                                                                                                                   \item 现在分词 (doing) 作宾补 (强调动作正在进行)，如：I saw the tester \textit{running the diagnostic program}.
+                                                                                                                                                                                                                                   \item 过去分词 (done) 作宾补 (强调被动或完成状态)，如：I need to get the report \textit{finished} by Friday.
+                                                                                                                                                                                                                                 \end{enumerate}
+                                                                                                                                                                                                                                 }\\
       \textbf{表语} (The Predictive) —— “主语的等号”                & 表语接在系动词（Linking Verb）之后，用来描述主语的身份、特征、状态或性质。                                              & $主语 (A) = 表语 (A')$. 表语其实就是主语的另一种描述，A $=$ A'.                                                                                                                           \\
       \textbf{系动词} (Linking Verbs)                               & 系动词本身没有具体的动作含义，它的作用像一把“等号” (=)，用来连接主语和描述主语状态的信息。                              & \begin{description}[nosep]
                                                                                                                                                                                          \item[最常见的系动词] be (am, is, are, was, were)
